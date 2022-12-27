@@ -9,6 +9,6 @@ public class Carro {
     Pessoa motorista;
 
     String saudacao(){
-        return String.format("Carro de placa %s é dirigido por %s %s Especificação do motorista %s", placa,motorista.nome,motorista.saudacao());
+        return String.format("Carro de placa %s é dirigido por %s %n Especificação do motorista %s", placa,motorista.nome,motorista.saudacao());
     }
 }
