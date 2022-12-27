@@ -1,17 +1,18 @@
 package org.example;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 public class Pessoa {
     String nome;
     String sobreNome;
     int idade;
 
-    public Pessoa(int idade, String nome, String sobreNome){
-        this.idade = idade;
-        this.nome = nome;
-        this.sobreNome = sobreNome;
-    }
+    LocalDate dataNascimento;
 
-    String andar(){
-        return nome+" esta andando";
+    Carro[] carros;
+
+    String saudacao(){
+        return String.format("Olá, meu nome é %s %s tenho %d anos %n", nome, sobreNome,dataNascimento.until(LocalDate.now(), ChronoUnit.YEARS));
     }
 }
